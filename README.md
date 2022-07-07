@@ -47,18 +47,18 @@ We will be using the  CRISP-DM model for the project
 - Deployment – How do stakeholders access the results?
 
 ## Business Understanding
-- Project planning
-- Set up project folder (Cookie cutter)
-- Set up credentials for Google Cloud project
-- Set up Git repo
-- Set up One Map credentials
+- Project planning - Done
+- Set up project folder (Cookie cutter) - Done
+- Set up credentials for Google Cloud project - done
+- Set up Git repo - Done
+- Set up One Map credentials - Done
 
 ## Data Understanding
-- Learn Google Place API
-- Extract data from Google Place API
-- Check data structure and validate
-- Learn One Map API
-- Pull planning area polygons
+- Learn Google Place API - In progress
+- Extract data from Google Place API - In progress
+- Check data structure and validate - Open
+- Learn One Map API - Done
+- Pull planning area polygons - Done
 
 
 ## Data Preparation
