@@ -68,19 +68,18 @@ def main(input_filepath):
 
     # Define variables & filepaths
     places_filepath = "data/raw/places.csv"
+    places_backup_filepath = "data/raw/places_backup.jsonl"
     reviews_filepath = "data/raw/reviews.csv"
+    reviews_backup_filepath = "data/raw/reviews_backup.jsonl"
     places_api_key = os.getenv("PLACES_API_KEY")
 
     gmaps = googlemaps.Client(key=places_api_key)
     logger.info("Gmaps client initiated")
 
-    input_df = pd.read_csv(
-        input_filepath,
-        skiprows=1,
-    )
+    input_df = pd.read_csv(input_filepath, skiprows=1)
 
-    query_list = input_df["queries"]
-    location_list = input_df["locations"]
+    query_list = input_df["queries"].dropna().to_list()
+    location_list = input_df["locations"].dropna().to_list()
 
     prepared_query_list = prepare_queries(query_list, location_list)
 
@@ -94,8 +93,11 @@ def main(input_filepath):
         i += 1
 
         if i % 10 == 0:
-            with jsonlines.open("data/raw/places_backup.jsonl", "w") as writer:
+            with jsonlines.open(places_backup_filepath, "w") as writer:
                 writer.write_all(json_list)
+            logger.info(
+                f"Places backup for query 0 - {i} saved in {places_backup_filepath}"
+            )
 
     df_list = [pd.json_normalize(json) for json in json_list]
     df = pd.concat(df_list, axis=0, ignore_index=True)
@@ -116,17 +118,23 @@ def main(input_filepath):
     # Loop through requests for place_ids in place_id_list and save reviews in df2
     logger.info("Requesting for reviews data")
     for place_id in place_id_list:
-        response = gmaps.place(place_id)
-        json_list.append(response)
-        i += 1
+        try:
+            response = gmaps.place(place_id)
+            json_list.append(response)
+            i += 1
 
-        if i % 10 == 0:
-            with jsonlines.open("data/raw/reviews_backup.jsonl", "w") as writer:
-                writer.write_all(json_list)
+            if i % 10 == 0:
+                with jsonlines.open(reviews_backup_filepath, "w") as writer:
+                    writer.write_all(json_list)
+                logger.info(
+                    f"Reviews backup for place ID 0 - {i} saved in {reviews_backup_filepath}"
+                )
 
-        reviews_df = pd.json_normalize(response.get("result").get("reviews"))
-        reviews_df["place_id"] = response.get("result").get("place_id")
-        df_list.append(reviews_df)
+            reviews_df = pd.json_normalize(response.get("result").get("reviews"))
+            reviews_df["place_id"] = response.get("result").get("place_id")
+            df_list.append(reviews_df)
+        except NotImplementedError:
+            pass
 
     df2 = pd.concat(df_list, axis=0, ignore_index=True)
 
