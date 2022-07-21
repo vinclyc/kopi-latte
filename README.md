@@ -75,3 +75,18 @@ We will be using the  CRISP-DM model for the project
     - Project introduction
     - Overall Kopi / Latte ratio
     - Map visualisation
+
+### Decision Tree for Classification
+1. Place's name contains
+    - Cafe, roaster -> Cafe
+    - Toast, coffee shop, kopitiam -> kopi
+    - Coffee -> Continue to step 2
+    - Else continue to step 2
+2. Place's reviews contains:
+    - cafe, cappucino, latte, white -> cafe
+    - kopi, teh, toast -> kopi
+    - Coffee -> continue to step 3
+    - No reviews -> continue to step 3
+3. Place's name OR reviews:
+    - Contains coffee -> manual review
+    - Does not contain coffee -> Discard
