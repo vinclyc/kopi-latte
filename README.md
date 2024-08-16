@@ -23,9 +23,9 @@ Scripts for data collection will be made available in the `src` folder, and samp
 ## Methodology
 Classifying over 4,800 locations and 21,000 reviews from Google Maps as either a café or kopitiam at scale was a core challenge. To tackle this efficiently, I developed a three-layer classification system to minimize manual effort:
 
-1. Heuristic Classification: This initial layer uses well-known coffee franchises and keywords in names to classify the majority of locations with minimal effort.
-2. Review Text Classification: Using Hugging Face, I finetuned a model to classify locations based on review content, automating a significant portion of the process.
-3. Manual Classification: For locations that remain ambiguous, I performed manual classification, which is the most labor-intensive step and was reserved for a manageable number of locations.
+1. **Heuristic Classification**: This initial layer uses well-known coffee franchises and keywords in names to classify the majority of locations with minimal effort.
+2. **Review Text** Classification: Using Hugging Face, I finetuned a model to classify locations based on review content, automating a significant portion of the process.
+3. **Manual Classification**: For locations that remain ambiguous, I performed manual classification, which is the most labor-intensive step and was reserved for a manageable number of locations.
 
 Further details on each stage of the project are provided below.
 
