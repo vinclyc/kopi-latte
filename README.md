@@ -7,8 +7,7 @@ Singapore's coffee culture is rich and diverse, with two main types of coffee be
 As a coffee enthusiast, I’ve always been curious about the coffee preferences across Singapore. Does kopi reign supreme across the entire island? Are there hidden café hotspots beyond the Central region? These questions inspired me to delve into the data and uncover the answers.
 
 ## Results & Key Insights
-
-
+![_Map depicting the density of cafes across Singapore](plots/kopi_latte_map.jpg?raw=true "Density of cafes across Singapore")
 _Map depicting the density of cafes across Singapore. Dark brown areas indicate higher concentrations of cafes compared to kopitiams._
 
 - **Kopi is king**: There are about 3 kopitiams for every 1 café in Singapore. The top areas with the most kopitiams are Jurong West (171), Sengkang (146), and Yishun (143).
