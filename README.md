@@ -1,5 +1,5 @@
 # The Kopi / Latte Ratio - Understanding Coffee Preference Across Singapore 
-### _Data Extraction via Google Maps API | Review Text Classification with Hugging Face | Geospatial Data Visualization with GeoPandas_
+### _Querying Locations via Google Maps API | Review Text Classification with Hugging Face | Geospatial Data Visualization with GeoPandas_
 
 ## Introduction & Motivation
 Singapore's coffee culture is rich and diverse, with two main types of coffee being served: **kopi**, a traditional blend made from dark-roasted Robusta beans and sweetened with condensed milk, and **latte** (or cappuccino, mocha, etc.), a more delicate drink featuring an espresso shot from Arabica beans and creamy steamed milk.
@@ -16,9 +16,7 @@ _Map depicting the density of cafes across Singapore. Dark brown areas indicate 
 - **Heartland highlights**: Among the heartlands, Kallang has the highest café-to-kopitiam ratio, with 1 café for every 2 kopitiams. Following closely are Serangoon, Bedok, and Pasir Ris.
 
 ## Project Structure
-The primary notebooks for this project are located in the `notebooks` folder, guiding you through the five key stages of the project. More details on each stage are provided in the 'Methodology' section below.
-
-Scripts for data collection will be made available in the `src` folder, and sample data in the `data` folder where applicable.
+The primary notebooks for this project are located in the `notebooks` folder, guiding you through the five key stages of the project. 
 
 ## Methodology
 Classifying over 4,800 locations and 21,000 reviews from Google Maps as either a café or kopitiam at scale was a core challenge. To tackle this efficiently, I developed a three-layer classification system to minimize manual effort:
@@ -30,7 +28,7 @@ Classifying over 4,800 locations and 21,000 reviews from Google Maps as either a
 Further details on each stage of the project are provided below.
 
 ### 1. Data Collection
-Using the OneMap API, I retrieved GeoJSON data for planning areas in Singapore and queried the Google Maps API to gather location and review data for both cafes and kopitiams.
+Using the OneMap API, I retrieved GeoJSON data for planning areas in Singapore and queried the Google Maps API for locations and reviews of cafes and kopitiams in the planning areas.
 
 ### 2. Data Preparation
 The collected location and review data were cleaned and prepared to create a dataset suitable for finetuning the review text classification model.
@@ -42,7 +40,7 @@ I finetuned a DistilBERT model using the Hugging Face toolkit to determine wheth
 The finetuned model was then used to classify the remaining unlabelled locations. Prediction scores were aggregated for each location, and a threshold was set to flag locations requiring manual review.
 
 ### 5. Data Visualisation
-After completing the manual review, I consolidated the labels from the three classification layers. Using GeoPandas, I performed a spatial join of the Google Maps locations with the GeoJSON data to calculate the coffee-to-kopitiam ratio for each area, yielding insights that were then visualized.
+After completing the manual review, I consolidated the labels from the three classification layers. Using GeoPandas, I performed a spatial join of the locations with the GeoJSON data to calculate the coffee-to-kopitiam ratio for each area, yielding insights that were then visualized.
 
 # Conclusion & Reflections
 Work in progress
