@@ -12,7 +12,7 @@ As a coffee enthusiast, I explored questions like:
 This project aimed to:
 - Enhance my skills in API usage.
 - Familiarize myself with NLP models via Hugging Face.
-- Improve geospatial data visualization.
+- Improve capabilities in geospatial data visualization.
 - Communicate insights clearly and visually.
 
 ## Results & Key Insights
@@ -21,7 +21,7 @@ This project aimed to:
 _Infographic on coffee preferences across Singapore_
 
 - **Kopi is king**: 2.4 kopitiams for every café in Singapore. Top areas: Jurong West (171), Sengkang (146), Yishun (143).
-- **Central café hotspots**: Highest ratios in Marina South, Singapore River, and Tanglin. Notable clusters: Seletar (Wheeler's Yard), Changi (Changi Village).
+- **Central café hotspots**: Highest ratios in Marina South, Singapore River, and Tanglin. Notable non-Central clusters: Seletar (Wheeler's Yard), Changi (Changi Village).
 - **East vs. West**: The East has more cafés per kopitiam; the West has twice as many kopitiams.
 - **Heartland highlights**: Serangoon, Kallang, and Queenstown have the highest café-to-kopitiam ratios; Sembawang, Bukit Batok, and Woodlands have the most kopitiams.
 
@@ -53,7 +53,7 @@ Classified remaining unlabeled locations, aggregating prediction scores.
 Used GeoPandas to calculate coffee-to-kopitiam ratios and visualize insights.
 
 ## Conclusion & Reflections
-This project was fun and led to discovering interesting cafés. The Hugging Face library greatly increased project speed, and I met my goals of enhancing my data science and analytics skills.
+This project was fun and led me to discovering interesting cafés. The Hugging Face library greatly increased project speed, and I met my goals of enhancing my data science and analytics skills.
 
 ## Acknowledgements
 Thanks to:
