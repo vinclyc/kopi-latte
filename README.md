@@ -51,8 +51,8 @@ In conclusion, this project was enjoyable and allowed me to discover many intere
 # Acknowledgements
 I would like to express my gratitude to the following resources that were instrumental in this project:
 
-- [Google Maps Platform]([url](https://mapsplatform.google.com/)): For providing essential location and reviews data.
-- [OneMap API]([url](https://www.onemap.gov.sg/apidocs/)) : For offering GeoJSON data on planning areas in Singapore.
-- [Hugging Face]([url](https://huggingface.co/)): For their user-friendly NLP library that facilitated model fine-tuning.
-- [GeoPandas]([url](https://geopandas.org/en/stable/)): For enabling efficient geospatial data visualization and analysis.
-- [Canva]([url](https://www.canva.com/)): For assisting in the creation of the infographic to present my findings.
+- [Google Maps Platform](https://mapsplatform.google.com/): For providing essential location and reviews data.
+- [OneMap API](https://www.onemap.gov.sg/apidocs/) : For offering GeoJSON data on planning areas in Singapore.
+- [Hugging Face](https://huggingface.co/): For their user-friendly NLP library that facilitated model fine-tuning.
+- [GeoPandas](https://geopandas.org/en/stable/): For enabling efficient geospatial data visualization and analysis.
+- [Canva](https://www.canva.com/): Tools used in the creation of the infographic to present my findings.
