@@ -43,7 +43,7 @@ I finetuned a DistilBERT model using the Hugging Face toolkit to determine wheth
 The finetuned model was then used to classify the remaining unlabelled locations. Prediction scores were aggregated for each location, and a threshold was set to flag locations requiring manual review.
 
 ### 5. Data Visualisation
-In conclusion, this project was enjoyable and enabled me to discover many interesting cafés to visit in Singapore through my data exploration. I was also impressed by the performance and ease of use of the Hugging Face library, which significantly accelerated the project’s progress. Overall, I successfully achieved my goals of enhancing my data science and analytics skills across various areas.
+After completing the manual review, I consolidated the labels from the three classification layers. Using GeoPandas, I performed a spatial join of the locations with the GeoJSON data to calculate the coffee-to-kopitiam ratio for each area, yielding insights that were visualized.
 
 # Conclusion & Reflections
 In conclusion, this project was enjoyable and allowed me to discover many interesting cafés to visit in Singapore through my data exploration. I was also impressed by the performance and ease of use of the Hugging Face library, which significantly accelerated the project’s progress. Overall, I successfully achieved my goals of developing my data science and analytics skills in various areas.
