@@ -6,7 +6,7 @@
 Singapore's coffee culture is diverse, featuring the **kopi** (traditional dark-roasted Robusta) and the **latte** (espresso from Arabica beans). 
 
 As a coffee enthusiast, I explored questions like:
-- How much does kopi dominate in Singapore?
+- Is kopi the preferred choice in Singapore?
 - Are there hidden café hotspots outside the Central region?
 
 This project aimed to:
