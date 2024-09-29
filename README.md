@@ -31,7 +31,7 @@ Find the main notebooks in the `notebooks` folder, guiding you through the proje
 ## Methodology
 To classify over 4,800 locations and 21,000 reviews efficiently, I developed a three-layer classification system:
 
-1. **Heuristic Classification**: This initial step uses coffee franchise names and keywords to classify the majority of locations with minimal manual effort.
+1. **Heuristic Classification**: This initial step uses coffee franchise names and keywords to classify the majority of locations with minimal manual effort. The results were then used for finetuning in the next step.
 2. **Review Text Classification**: I fine-tuned a Hugging Face model to classify locations based on review content, automating a significant portion of the process.
 3. **Manual Classification**: For locations that remain ambiguous after the first two layers, I performed manual classification, ensuring accuracy while managing the workload effectively.
 
@@ -47,7 +47,7 @@ Cleaned and organized the data for model training.
 Fine-tuned a DistilBERT model on Hugging Face, achieving 90% accuracy.
 
 ### 4. Model Inference
-Classified remaining unlabeled locations, aggregating prediction scores.
+Classified remaining unlabeled locations, aggregating prediction scores and setting a suitable threshold for manual classification.
 
 ### 5. Data Visualization
 Used GeoPandas to calculate coffee-to-kopitiam ratios and visualize insights.
